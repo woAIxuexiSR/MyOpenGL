@@ -7,12 +7,15 @@
 class ImageBuffer
 {
 public:
-    
     int width, height, nchannel;
-    unsigned char* data;
-
+    unsigned char *data;
 
     ImageBuffer(int _w, int _h, int _n = 3);
-    __device__ void write(int w, int h, float3 c);
-    __host__ void save(const std::string& file);
+
+    template<class Func>
+    void render(Func paint);
+
+    void save(const std::string &file);
+
+    ~ImageBuffer();
 };
