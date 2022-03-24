@@ -19,3 +19,5 @@ public:
 
     ~ImageBuffer();
 };
+
+#include "image.inl"

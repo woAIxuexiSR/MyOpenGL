@@ -44,14 +44,6 @@ void ImageBuffer::render(Func paint)
     checkCudaErrors(cudaDeviceSynchronize());
 }
 
-// void ImageBuffer::render()
-// {
-//     kernel<<<256, 256>>>(data, width, height, nchannel, [] __device__ (float xp, float yp) -> float3 {
-//         return make_float3(xp, yp, 0.0f);
-//     });
-//     checkCudaErrors(cudaDeviceSynchronize());
-// }
-
 void ImageBuffer::save(const std::string &file)
 {
     int size = width * height * nchannel;
