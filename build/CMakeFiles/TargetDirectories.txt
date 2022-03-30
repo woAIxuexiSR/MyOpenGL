@@ -1,4 +1,0 @@
-/home/surui/MyOpenGL/build/CMakeFiles/test.dir
-/home/surui/MyOpenGL/build/CMakeFiles/main.dir
-/home/surui/MyOpenGL/build/CMakeFiles/edit_cache.dir
-/home/surui/MyOpenGL/build/CMakeFiles/rebuild_cache.dir
