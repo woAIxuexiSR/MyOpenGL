@@ -1,18 +1,17 @@
 #include <iostream>
-#include <cuda_runtime.h>
 #include "helper_cuda.h"
+#include "ticktock.h"
 #include "image.h"
+#include "buffer.h"
 
 int main()
 {
-    int w = 2048, h = 1024;
-
-    ImageBuffer img(w, h);
-    img.render([] __device__ (float xp, float yp) -> float3 {
-        return make_float3(xp, yp, 0.0f);
-    });
-
-    img.save("test.jpg");
+    int a[10];
+    for(int i = 0; i < 10; i++)
+        a[i] = i;
+    
+    for(int i = 0; i < 10; i++)
+        std::cout << a[i] << std::endl;
 
     return 0;
 }
